@@ -29,7 +29,7 @@ ggplot(diamonds, aes(price)) +
 ggplot(diamonds, aes(carat)) +
   geom_histogram(bins=100)
 
-#Compare non-scalar variables
+#Compare numeric variables
 
 ggplot(diamonds, aes(cut, price)) +
   geom_boxplot(aes(fill=cut))
@@ -37,7 +37,7 @@ ggplot(diamonds, aes(cut, price)) +
 ggplot(diamonds, aes(color, price)) +
   geom_boxplot(aes(fill=color))
 
-#Facet by non-scalar
+#Facet by factor variables
 ggplot(diamonds, aes(carat, price, colour=clarity)) +
   geom_point()+
   facet_wrap(~cut)
