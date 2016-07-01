@@ -1,0 +1,42 @@
+---
+title: "Plot"
+author: "Michael Way"
+date: "29 June 2016"
+output: html_document
+---
+
+# Main Title
+
+You can write blocks of text. You can write blocks of text. You can write blocks of text. You can write blocks of text. You can write blocks of text. You can write blocks of text. You can write blocks of text.You can write blocks of text. You can write blocks of text.You can write blocks of text.You can write blocks of text. You can write blocks of text. You can write blocks of text.
+
+You can insert hyperlinks <http://rmarkdown.rstudio.com>
+
+1. Item 1
+    + Item 1a
+    + Item 2b
+
+Use 2 stars to make text **BOLD** or 1 star to make *ITALIC*
+
+##Plotting data
+
+```{r diamonds, echo=FALSE, warning=FALSE}
+library(ggplot2)
+
+ggplot(diamonds, aes(carat, price, colour=clarity)) +
+  geom_point()+
+  facet_wrap(~cut)
+
+```
+
+##Summarising Data
+
+Number of datapoints: `r nrow(diamonds)`
+
+Number of variable: `r ncol(diamonds)`
+
+```{r}
+
+head(diamonds)
+
+```
+
